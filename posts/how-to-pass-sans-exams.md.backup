@@ -1,0 +1,92 @@
+---
+title: "How to Pass SANS Exams"
+date: 2021-10-28T01:52:54+04:00
+description: "A simple yet effective guide to help you pass SANS exams with flying colors."
+tags: ["SANS","GIAC","Exam"]
+type: post
+draft: false
+---
+When I was preparing for my GPEN exam, I searched online (a lot) to find some useful hints. 
+
+This article helps you in passing SANS/GIAC exams and get a high score. I'm going to share very simple and effective tips to help you archive that!
+
+I myself have passed three GIAC exams as of today, I scored more than 90% in all three, and I finished ~30 minutes early :zap: in each one of them.
+
+![image](/images/posts/gpen_cert1.jpg)
+
+## What is the difference between SANS and GIAC?
+[SANS Institute](https://www.sans.org/) specializes in Information and Cyber Security training, it was founded in 1898. Simply it's the body that provides training services. On the other hand, [GIAC](https://www.giac.org/) is the entity that is responsible for the examination.
+
+For example, you can study [SEC560: Network Penetration Testing and Ethical Hacking](https://www.sans.org/cyber-security-courses/network-penetration-testing-ethical-hacking/) course from SANS. And if you wish, you can take the [GIAC Penetration Tester GPEN](https://www.giac.org/certifications/penetration-tester-gpen/) exam from GIAC.
+
+
+## What is the Formula of Success?
+### Remember, the Exam is Open Book
+The exam is open book so if you study hard you will definitely pass. GIAC want you to pass (unlike other certification vendors). I have seen that in both the study material and the exam nature; they want to get the information out there.
+### Watch the Videos and Take Notes
+Videos are the first thing I watch. They help me understand complicated concepts. Additionally, many times instructors share extracurricular content that helps you in your daily conversations.
+### Solve All the Labs
+The labs are insanely amusing and educational. And you will be asked about these labs. Make sure you are fully comfortable in solving all exercies covered in the material.
+### Read Thoroughly
+You need to read every word in the books, and I mean EVERY SINGLE WORD. Specially the notes below the slides, they have some details that are not covered in the lecture due to time limitations. I highlight every sentence I didn't know before taking the course to help me memorize it.
+
+### Prepare an Awesome Index
+What's the index? It's small booklet you prepare to help you navigate the books and find answers (quickly!). I can't stress this enough, it's your key to success. The steps I take to prepare an awesome index are:
+1. When you read the books and highlight information, use a different color for each book. For example use Blue for Book 1, Yellow for Book 2...etc.
+2. After you finish Book 1, read the highlighted information again and capture interesting reference points in excel in the following format. Don't waste a lot of time "summarizing" the books, you only need to know where to find the information you need.
+
+|Title  |Description                         |Page |Book |
+|---------|-------------------------------------|------|------|
+|DNS-MSF  | Brute force, cache query, SRV, PTR. |51   |1|
+|DNS-NMAP | dnz-zone-transfer and dns-brute     |48   |1|
+
+3. Be strategic with the Titles, write the Subject then topic. For example, DNS then NMAP scripts used for DNS recon/attacks.
+4. Sort by Title.
+5. Convert the excel sheet to a more readable format using [Voltaire](https://voltaire.publickey.io/), it's an index creation tool built by [ Matthew Toussain](https://www.sans.org/profiles/matthew-toussain/) - a SANS Instructor. The tool is simple to use, but you can always refer to the tutorial [here](https://www.youtube.com/watch?v=bHpkTArlXWc).
+6. Take the Output, Paste it in a Word Document.
+7. I take it a step further and Color Code the Book Number as shown below (Yellow for Book 2). Color coding helps me decided quickly which book to search; I use yellow to quickly jump to Book 2.
+![image](/images/posts/index_sample.png)
+8. Print the Index!
+### Utilize Practice Exams to the Most
+A GIAC certification attempt comes with two practice exams as of now. Both the actual exam and practice exam have hands on questions where you'll be granted access to a VM to run an exploit for example. Below are the rules I live by:
+1. Treat the practice exam like the actual exam.
+2. Only take the practice exam after you are done with studying and the index is printed.
+3. Leave at least 3 days between the two practice exams.
+4. Leave at least 7 days between the second practice exam and the actual exam.
+5. Identify knowledge gaps and study more (if required).
+
+Practice exams in on my opinion are slightly easier than the actual exam, use your score to decide if you are ready.
+
+### Time Management
+If you refer to the [GPEN](https://www.giac.org/certifications/penetration-tester-gpen/) exam page as an example, it tells you there are 82 questions that should be answered in 3 hours; which gives you slightly more than 2 minutes for each question.
+
+What I do is I look at the time and number of questions answered. If 20 minutes are gone, I should have answered about 10 questions. 
+
+***Pro Tip:*** If you are stuck on a question just skip it :clock1:.
+
+***Pro Tip:*** Hands on questions are presented at the end of the exam.
+
+### Test Center Rules
+Make sure you review the test center rules ahead of time. I don't like to be surprised right before my exam :cold_sweat:. GIAC has started supporting taking exams form the comfort if your home, but I didn't try that to be honest.
+### Preparing the GIAC Bag
+The exam is open book, but you are not allowed to bring electronic devices with you. What I typically carry is:
+1. The course materials.
+2. The lab manual.
+3. The Index.
+4. Sometimes I print man pages for tools I use heavily like NMAP.
+5. SANS cheat sheets.
+![image](/images/posts/sans_cheat_sheets.jpg)
+
+## Some Remarks
+### GIAC Advisory Board
+GIAC Advisory Board is a mailing list that has GIAC certified professionals who scored more than 90%, or who I like to call ***The Best of The Best***. You should definitely try to get in there. This board is used for technical discussions mainly, for example, if you are stuck somewhere in a forensics case you can post your question, and the experts would jump to the rescue :alien:.
+### Giveaway
+Did you know that you can give away practice exams? Let's say you scored 95% in your first practice exam and you are comfortable enough to skip the second one, you can give it away to anyone. Fellow analysts occasionally give away practice exams in the Advisory Board :gift:.
+
+## Closing Notes
+
+GIAC exams are not hard. GIAC want you to pass the exam. If you have any questions feel free to reach out :email:, I'm there to support you.
+
+Until next time..
+
+Hosam,
