@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Shell Venom</title>
-    <link>https://shellvenom.com/posts/</link>
+    <link>https://www.shellvenom.com/posts/</link>
     <description>Recent content in Posts on Shell Venom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 28 Oct 2021 01:52:54 +0400</lastBuildDate>
     
-	<atom:link href="https://shellvenom.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.shellvenom.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to Pass SANS Exams</title>
-      <link>https://shellvenom.com/posts/how-to-pass-sans-exams/</link>
+      <link>https://www.shellvenom.com/posts/how-to-pass-sans-exams/</link>
       <pubDate>Thu, 28 Oct 2021 01:52:54 +0400</pubDate>
       
-      <guid>https://shellvenom.com/posts/how-to-pass-sans-exams/</guid>
+      <guid>https://www.shellvenom.com/posts/how-to-pass-sans-exams/</guid>
       <description>When I was preparing for my GPEN exam, I searched online (a lot) to find some useful hints.
 This article helps you in passing SANS/GIAC exams and get a high score. I&amp;rsquo;m going to share very simple and effective tips to help you archive that!
 I myself have passed three GIAC exams as of today, I scored more than 90% in all three, and I finished ~30 minutes early ⚡ in each one of them.</description>
