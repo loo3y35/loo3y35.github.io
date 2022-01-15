@@ -17,25 +17,25 @@
     
 
     
-    <title>whoami</title>
-    <meta name="description" content="The Cyber Security Blog that covers Red Teaming, Blue Teaming, and Purple Teaming.">
-    <meta name="keywords" content='blog, shell venom, cyber security, security, blue team, red team, purple team, hacking'>
+    <title>Username Enumeratoin With Python and Mutillidae</title>
+    <meta name="description" content="How to enumerate usernames with python">
+    <meta name="keywords" content='blog, shell venom, cyber security, security, blue team, red team, purple team, hacking, Python, Red Team'>
 
-    <meta property="og:url" content="https://www.shellvenom.com/whoami/">
+    <meta property="og:url" content="https://www.shellvenom.com/posts/username-enumeratoin-with-python-and-mutillidae/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="whoami">
-    <meta property="og:description" content="The Cyber Security Blog that covers Red Teaming, Blue Teaming, and Purple Teaming.">
+    <meta property="og:title" content="Username Enumeratoin With Python and Mutillidae">
+    <meta property="og:description" content="How to enumerate usernames with python">
     <meta property="og:image" content="/images/avatar.webp">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="whoami">
-    <meta name="twitter:description" content="The Cyber Security Blog that covers Red Teaming, Blue Teaming, and Purple Teaming.">
-    <meta property="twitter:domain" content="https://www.shellvenom.com/whoami/">
-    <meta property="twitter:url" content="https://www.shellvenom.com/whoami/">
+    <meta name="twitter:title" content="Username Enumeratoin With Python and Mutillidae">
+    <meta name="twitter:description" content="How to enumerate usernames with python">
+    <meta property="twitter:domain" content="https://www.shellvenom.com/posts/username-enumeratoin-with-python-and-mutillidae/">
+    <meta property="twitter:url" content="https://www.shellvenom.com/posts/username-enumeratoin-with-python-and-mutillidae/">
     <meta name="twitter:image" content="/images/avatar.webp">
 
     
-    <link rel="canonical" href="https://www.shellvenom.com/whoami/" />
+    <link rel="canonical" href="https://www.shellvenom.com/posts/username-enumeratoin-with-python-and-mutillidae/" />
 
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -183,50 +183,35 @@
     <div class="post container">
 
     <div class="post-header-section">
-        <h1>whoami</h1>
+        <h1>Username Enumeratoin With Python and Mutillidae</h1>
+        <small role="doc-subtitle">How to enumerate usernames with python</small>
+        <p class="post-date">
+            November 3, 2021
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/python">Python</a></li>
+        
+            <li class="post-tag"><a href="/tags/red-team">Red Team</a></li>
+        
+        </ul>
     </div>
 
     <div class="post-content">
         <p>
-            <h2 id="tldr-n-2">TL;DR (N-2)</h2>
-<p>Hosam Hittini | Security Leader | Purple Teamer</p>
-<h2 id="background-n-1">Background (N-1)</h2>
-<p>Howdy!
-My name is Hosam Hittini, the Founder of Shell Venom. I&rsquo;m a Security Leader &amp; a Purple Teamer.
-I have built this website to share knoweldge. You probably can tell that I&rsquo;m a big fan of SANS (see below) ;)</p>
-<p>My background covers Security Operatins, DFIR, Penetration Testing, Cloud Security, and Security Consultancy.</p>
-<h3 id="certificates">Certificates</h3>
-<ul>
-<li>Cisco Certified CyberOps Associate</li>
-<li>GIAC Penetration Tester (GPEN)</li>
-<li>GIAC Web Application Penetration Tester (GWAPT)</li>
-<li>GIAC Security Leadership (GSLC)</li>
-</ul>
-<h3 id="trainings">Trainings</h3>
-<h4 id="leadership">Leadership</h4>
-<ul>
-<li>MGT512: Security Leadership Essentials for Managers &ndash;&gt; GSLC</li>
-<li>MGT551: Building and Leading Security Operations Centers</li>
-</ul>
-<h4 id="penetration-testing">Penetration Testing</h4>
-<ul>
-<li>SEC560: Network Penetration Testing and Ethical Hacking &ndash;&gt; GPEN</li>
-<li>SEC660: Advanced Penetration Testing, Exploit Writing, and Ethical Hacking &ndash;&gt; GXPN</li>
-<li>SEC542: Web App Penetration Testing and Ethical Hacking &ndash;&gt; GWAPT</li>
-<li>SEC575: Mobile Device Security and Ethical Hacking &ndash;&gt; GMOB</li>
-</ul>
-<h4 id="dfir">DFIR</h4>
-<ul>
-<li>SEC504: Hacker Tools, Techniques, and Incident Handling &ndash;&gt; GCIH</li>
-<li>FOR508: FOR508: Advanced Incident Response, Threat Hunting, and Digital Forensics &ndash;&gt; GCFA</li>
-</ul>
-<h4 id="cloud-security">Cloud Security</h4>
-<ul>
-<li>SEC510: Public Cloud Security: AWS, Azure, and GCP &ndash;&gt; GPCS</li>
-</ul>
-<h2 id="n">(N)</h2>
-<p>I have built Shell Venom to share the knoweldge and experince I&rsquo;ve gained over the years. If there&rsquo;s anything you want me to cover please let me know!</p>
-<p>#GoPurple</p>
+            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install docker docker-compose
+git clone https://github.com/webpwnized/mutillidae-dockerhub.git
+cd mutillidae-dockerhub/
+sudo docker-compose up
+</code></pre></div><p>When I was preparing for my GPEN exam, I searched online (a lot) to find some useful hints.</p>
+<p><img src="/images/posts/gpen_cert1.jpg" alt="image"></p>
+<h2 id="what-is-the-difference-between-sans-and-giac">What is the difference between SANS and GIAC?</h2>
+<p><a href="https://www.sans.org/">SANS Institute</a> specializes in Information and Cyber Security training, it was founded in 1898. Simply it&rsquo;s the body that provides training services. On the other hand, <a href="https://www.giac.org/">GIAC</a> is the entity that is responsible for the examination.</p>
+<p><em><strong>Pro Tip:</strong></em> Hands on questions are presented at the end of the exam.</p>
+<h2 id="closing-notes">Closing Notes</h2>
+<p>GIAC exams are not hard. GIAC want you to pass the exam. If you have any questions feel free to reach out ✉️, I&rsquo;m there to support you.</p>
+<p>Until next time..</p>
 <p>Hosam,</p>
 
         </p>
@@ -234,6 +219,8 @@ I have built this website to share knoweldge. You probably can tell that I&rsquo
 </div>
 
 
+
+    
 
         </main><footer class="footer">
     <span>&copy; 2022 Shell Venom</span>
