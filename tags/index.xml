@@ -6,28 +6,10 @@
     <description>Recent content in Tags on Shell Venom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Nov 2021 00:35:08 +0400</lastBuildDate>
+    <lastBuildDate>Thu, 28 Oct 2021 01:52:54 +0400</lastBuildDate>
     
 	<atom:link href="https://www.shellvenom.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Python</title>
-      <link>https://www.shellvenom.com/tags/python/</link>
-      <pubDate>Wed, 03 Nov 2021 00:35:08 +0400</pubDate>
-      
-      <guid>https://www.shellvenom.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Red Team</title>
-      <link>https://www.shellvenom.com/tags/red-team/</link>
-      <pubDate>Wed, 03 Nov 2021 00:35:08 +0400</pubDate>
-      
-      <guid>https://www.shellvenom.com/tags/red-team/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>GIAC</title>
