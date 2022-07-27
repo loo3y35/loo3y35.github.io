@@ -1,0 +1,28 @@
+---
+title: "Getting Started With Atomic Red Team - A Purple Teaming Tool"
+date: 2022-07-21T00:34:13+04:00
+draft: true
+description: "An overview of Atomic Red Team tool and how to use to start Purple Team engagements."
+tags: ["Blue-Team","Purple-Team","Atomic-Red-Team","MITRE-ATT&CK","Red-Canary"]
+type: post
+image: "https://camo.githubusercontent.com/accba77fae09bbd20be99fde3ad76dd2537cdce05b68ffd718ce42b9fa6a411c/68747470733a2f2f72656463616e6172792e636f6d2f77702d636f6e74656e742f75706c6f6164732f41746f6d69632d5265642d5465616d2d4c6f676f2e706e67"
+
+---
+
+# Introduction
+What is Purple Teaming? For me, it simply means emulating attacker techniques and testing both your detection and response capabilities. Let's say you are interested in [T1136](https://attack.mitre.org/techniques/T1136/) and you want to confirm that your defenses are able to detect Account Creation. From a Purple Teaming prospective that means you should attempt to create local account(s) and check if your controls are able to detect (and respond) to this event.
+
+In this post, we'll speak about [Atomic Red Team](https://atomicredteam.io/) tool and how you can use to easily emulate attacker techniques. It uses a building block called Atmoic, which simply mean a test to run. As of the day of writing this post, there are hundreds of test pee-built in the tool. And all of them are mapped to MITRE ATT&CK model for better tracking. There are different ways to install and use the tool, but we'll focus on PowerShell because let's admit it, PS rocks.
+
+# Before We Start
+1. Make sure you have permission to run the test.
+2. Make sure you understand any test before you run it.
+3. Run tests only on test machines.
+4. If your test machine is running on a production network, I wouldn't really call it a test machine ;).
+# Prerequisites
+# Getting Started
+# Feature Overview
+## Searching for a Test
+## Checking Prerequisites of a Test
+## Installing Prerequisites
+## 
