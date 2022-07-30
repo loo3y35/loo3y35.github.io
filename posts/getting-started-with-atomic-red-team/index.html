@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #9c00c8;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>How to Use Atomic Red Team - A Purple Teaming Tool</title>
+    <meta name="description" content="An overview of Atomic Red Team tool and how to use to start Purple Team engagements.">
+    <meta name="keywords" content='blog, shell venom, cyber security, security, blue team, red team, purple team, hacking, Atomic-Red-Team, MITRE-ATT&CK, Purple-Team, Red-Canary'>
+
+    <meta property="og:url" content="https://www.shellvenom.com/posts/getting-started-with-atomic-red-team/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="How to Use Atomic Red Team - A Purple Teaming Tool">
+    <meta property="og:description" content="An overview of Atomic Red Team tool and how to use to start Purple Team engagements.">
+    <meta property="og:image" content="https://www.shellvenom.com/images/posts/ART-Splash.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Use Atomic Red Team - A Purple Teaming Tool">
+    <meta name="twitter:description" content="An overview of Atomic Red Team tool and how to use to start Purple Team engagements.">
+    <meta property="twitter:domain" content="https://www.shellvenom.com/posts/getting-started-with-atomic-red-team/">
+    <meta property="twitter:url" content="https://www.shellvenom.com/posts/getting-started-with-atomic-red-team/">
+    <meta name="twitter:image" content="https://www.shellvenom.com/images/posts/ART-Splash.jpg">
+
+    
+    <link rel="canonical" href="https://www.shellvenom.com/posts/getting-started-with-atomic-red-team/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+      <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5554PCW');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL05DBQ690"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-YL05DBQ690');
+  </script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://www.shellvenom.com">
+                <img src="/images/avatar.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://www.shellvenom.com">Shell Venom</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/whoami/"> whoami </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://twitter.com/looEyes"><span data-feather='twitter'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/loo3y35"><span data-feather='github'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://www.linkedin.com/in/hhittini/"><span data-feather='linkedin'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/whoami/"> whoami </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://twitter.com/looEyes"><span data-feather='twitter'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/loo3y35"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/hhittini/"><span data-feather='linkedin'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>How to Use Atomic Red Team - A Purple Teaming Tool</h1>
+        <small role="doc-subtitle">An overview of Atomic Red Team tool and how to use to start Purple Team engagements.</small>
+        <p class="post-date">
+            July 21, 2022
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/atomic-red-team">Atomic-Red-Team</a></li>
+        
+            <li class="post-tag"><a href="/tags/mitre-attck">MITRE-ATT&amp;CK</a></li>
+        
+            <li class="post-tag"><a href="/tags/purple-team">Purple-Team</a></li>
+        
+            <li class="post-tag"><a href="/tags/red-canary">Red-Canary</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><p class="md__image">
+  <img src="/images/posts/ART-Splash.jpg" id="zoom-default" alt="image"  />
+</p></p>
+<h1 id="introduction">Introduction</h1>
+<p>What is Purple Teaming? For me, it simply means emulating attacker techniques and testing both your detection and response capabilities. Let&rsquo;s say you are interested in <a href="https://attack.mitre.org/techniques/T1136/">T1136</a> and you want to confirm that your defenses are able to detect Account Creation. From a Purple Teaming prospective that means you should attempt to create local account(s) and check if your controls are able to detect (and respond) to this event.</p>
+<p>In this post, we&rsquo;ll speak about <a href="https://atomicredteam.io/">Atomic Red Team</a> tool and how you can use to easily emulate adversary techniques. It uses a building block called Atmoic, which simply mean a test to run. As of the day of writing this post, there are more than 700 tests pre-built in the tool. And all of them are mapped to <a href="https://attack.mitre.org/matrices/enterprise/">MITRE ATT&amp;CK</a> model for better tracking. There are different ways to install and use the tool, but we&rsquo;ll focus on PowerShell because let&rsquo;s admit it, PS rocks🙌.</p>
+<h1 id="before-we-start">Before We Start</h1>
+<ol>
+<li>Make sure you have permission to run the test 📓.</li>
+<li>Make sure you understand any test before you run it.</li>
+<li>Run the tool only on test machines/environments.</li>
+<li>If your test machine is running on a production network, I wouldn&rsquo;t really call it a test machine 😉.</li>
+</ol>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li>Authorization 🎩.</li>
+<li>PowerShell with admin access, you also need to allow executing scripts in PS <code>Set-ExecutionPolicy</code> command.</li>
+<li>Internet connectivity to <a href="https://githubusercontent.com">https://githubusercontent.com</a> over HTTPS to Atomic-Red-Team and Atomics download.</li>
+</ol>
+<h2 id="installation">Installation</h2>
+<p>There are two ways to install Atomic-Red-Team, with (or without Atomics). Installing it with Atomics is the recommended approach and it can be achieved with the following command:</p>
+<pre><code>IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+Install-AtomicRedTeam -getAtomics
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART1.png" id="zoom-default" alt="image"  />
+</p>
+If installation has failed due to any reason and you wish to restart, you can use the <code>Force</code> switch as shown below</p>
+<pre><code>IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+Install-AtomicRedTeam -getAtomics -Force
+</code></pre><h2 id="importing-the-ps-module">Importing the PS Module</h2>
+<p>If you close your PowerShell window, you likely need to re-import the module; which can be done with the following command</p>
+<pre><code>Import-Module &quot;C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1&quot; -Force
+</code></pre><h1 id="feature-overview">Feature Overview</h1>
+<h2 id="listing-all-supported-techniques">Listing All Supported Techniques</h2>
+<p>You can use this command to show the names of all supported techniques or attacks. Which would take a couple of minutes, but it&rsquo;s necessary to find the ones you are mostly interested in.</p>
+<pre><code>Invoke-AtomicTest All -ShowDetailsBrief
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART3.png" id="zoom-default" alt="image"  />
+</p>
+In some cases, you will find there&rsquo;s more than one test for a single technique. For example, <a href="https://attack.mitre.org/techniques/T1003/001/">T1003.001</a> has 12 tests as shown above.</p>
+<h2 id="showing-brief-details-about-a-technique">Showing Brief Details About a Technique</h2>
+<p>This will simply show the list of tests. We replaced <code>All</code> with the technique ID</p>
+<pre><code>Invoke-AtomicTest T1071.004 -ShowDetailsBrief
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART4.png" id="zoom-default" alt="image"  />
+</p></p>
+<h2 id="showing-details-about-a-technique">Showing Details About a Technique</h2>
+<p>This is a very important step to understand what you are getting yourself into, it shows you the details, tools, and commands used to run the test. The command shown below will show the details of all the tests for <a href="https://attack.mitre.org/techniques/T1071/004/">T1071.004</a>. Note that all tests are shown unless you specify the test number.</p>
+<pre><code>Invoke-AtomicTest T1071.004 -ShowDetails
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART5.png" id="zoom-default" alt="image"  />
+</p>
+You also have the option of focusing on a single test by appending <code>TestNumber</code> switch as shown below</p>
+<pre><code>Invoke-AtomicTest T1071.004 -ShowDetails -TestNumbers 3
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART6.png" id="zoom-default" alt="image"  />
+</p></p>
+<h2 id="checking-prerequisites-of-a-test">Checking Prerequisites of a Test</h2>
+<p>Some test rely on tools that are not natively installed on Windows and they are refereed to as prerequisites. This is as simple as anything can be. Below example shows that Test 3 of <a href="https://attack.mitre.org/techniques/T1071/004/">T1071.004</a> has all the prerequisites met.</p>
+<pre><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -CheckPrereqs
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART7.png" id="zoom-default" alt="image"  />
+</p>
+But, <a href="https://attack.mitre.org/techniques/T1095/">T1095</a> test number 2 need <a href="https://nmap.org/ncat/">Ncat</a> to be installed</p>
+<pre><code>Invoke-AtomicTest T1095 -TestNumbers 2 -CheckPrereqs
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART8.png" id="zoom-default" alt="image"  />
+</p></p>
+<h2 id="installing-prerequisites">Installing Prerequisites</h2>
+<p>Okay, what&rsquo;s the easiest way to install Ncat for <a href="https://attack.mitre.org/techniques/T1095/">T1095</a> test number 2? A single command shown below, we replace <code>CheckPrereqs</code> with <code>GetPrereqs</code>. All good now</p>
+<pre><code>Invoke-AtomicTest T1095 -TestNumbers 2 -GetPrereqs
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART9.png" id="zoom-default" alt="image"  />
+</p></p>
+<h2 id="running-a-test">Running a Test</h2>
+<p>Removing the extra switches is what we need to do here. For example, if we want to generate long DNS queries and see if our defense tools are going to trigger an alert, we need to perform the following steps ⚡:</p>
+<h3 id="1-read-and-understand-whats-going-to-happen">1. Read and Understand what&rsquo;s Going to Happen</h3>
+<pre><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -ShowDetails
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART10.png" id="zoom-default" alt="image"  />
+</p>
+We can see it uses PowerShell, doesn&rsquo;t need an elevated privilege, and we have 3 customization options shown in red.</p>
+<h3 id="2-run-the-test-with-the-default-options">2. Run the Test with the Default Options</h3>
+<pre><code>Invoke-AtomicTest T1071.004 -TestNumbers 3
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART11.png" id="zoom-default" alt="image"  />
+</p></p>
+<h3 id="3-run-the-test-with-custom-options-optional">3. Run the Test with Custom Options (Optional)</h3>
+<p>Adding the PromptForInputArgs switch informs the tool to ask us for input arguments, which allows us to configure 3 options as shown below:</p>
+<pre><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -PromptForInputArgs
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/ART12.png" id="zoom-default" alt="image"  />
+</p></p>
+<h3 id="4-verify-the-test-is-working">4. Verify the Test is Working!!!</h3>
+<p>Yes it does, Mr. Wireshark approves the tool 🎆
+<p class="md__image">
+  <img src="/images/posts/ART13.png" id="zoom-default" alt="image"  />
+</p></p>
+<h1 id="closing-notes">Closing Notes</h1>
+<p>I really love Atomic Red Team, it allows me to test our defenses very easily. We have went over the most important features according to Hosam Sensor. The tool is awesome, but everyone can make it better, click <a href="https://github.com/redcanaryco/atomic-red-team#contribute-to-atomic-red-team">here</a> if you wish to contribute ;)</p>
+<p>Until next time 🚀</p>
+<p>Hosam Hittini</p>
+
+        </p>
+    </div>	
+</div>
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2022 Shell Venom</span>
+    <span>Baked with &#128156;&#65039;</span>
+	<span>Red, Blue, and Everything in Between &#128013</span>
+</footer>
+<script src="/js/medium-zoom.js"></script>
+		<script src="/js/placeholders.js" defer></script>
+		<script src="/js/index.js"></script>
+    </body>
+</html>

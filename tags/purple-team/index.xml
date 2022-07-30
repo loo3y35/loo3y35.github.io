@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shell Venom</title>
-    <link>https://www.shellvenom.com/</link>
-    <description>Recent content on Shell Venom</description>
+    <title>Purple-Team on Shell Venom</title>
+    <link>https://www.shellvenom.com/tags/purple-team/</link>
+    <description>Recent content in Purple-Team on Shell Venom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 21 Jul 2022 00:34:13 +0400</lastBuildDate>
     
-	<atom:link href="https://www.shellvenom.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.shellvenom.com/tags/purple-team/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,17 +18,6 @@
       
       <guid>https://www.shellvenom.com/posts/getting-started-with-atomic-red-team/</guid>
       <description>Introduction What is Purple Teaming? For me, it simply means emulating attacker techniques and testing both your detection and response capabilities. Let&amp;rsquo;s say you are interested in T1136 and you want to confirm that your defenses are able to detect Account Creation. From a Purple Teaming prospective that means you should attempt to create local account(s) and check if your controls are able to detect (and respond) to this event.</description>
-    </item>
-    
-    <item>
-      <title>How to Pass SANS Exams</title>
-      <link>https://www.shellvenom.com/posts/how-to-pass-sans-exams/</link>
-      <pubDate>Thu, 28 Oct 2021 01:52:54 +0400</pubDate>
-      
-      <guid>https://www.shellvenom.com/posts/how-to-pass-sans-exams/</guid>
-      <description>When I was preparing for my GPEN exam, I searched online (a lot) to find some useful hints.
-This article helps you in passing SANS/GIAC exams and get a high score. I&amp;rsquo;m going to share very simple and effective tips to help you archive that!
-I myself have passed three GIAC exams as of today, I scored more than 90% in all three, and I finished ~30 minutes early ⚡ in each one of them.</description>
     </item>
     
   </channel>

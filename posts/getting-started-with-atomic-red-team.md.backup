@@ -1,28 +1,115 @@
 ---
-title: "Getting Started With Atomic Red Team - A Purple Teaming Tool"
+title: "How to Use Atomic Red Team - A Purple Teaming Tool"
 date: 2022-07-21T00:34:13+04:00
-draft: true
+draft: false
 description: "An overview of Atomic Red Team tool and how to use to start Purple Team engagements."
-tags: ["Blue-Team","Purple-Team","Atomic-Red-Team","MITRE-ATT&CK","Red-Canary"]
+tags: ["Atomic-Red-Team","Purple-Team",,"MITRE-ATT&CK","Red-Canary"]
 type: post
-image: "https://camo.githubusercontent.com/accba77fae09bbd20be99fde3ad76dd2537cdce05b68ffd718ce42b9fa6a411c/68747470733a2f2f72656463616e6172792e636f6d2f77702d636f6e74656e742f75706c6f6164732f41746f6d69632d5265642d5465616d2d4c6f676f2e706e67"
+image: "https://www.shellvenom.com/images/posts/ART-Splash.jpg"
 
 ---
-
+![image](/images/posts/ART-Splash.jpg)
 # Introduction
 What is Purple Teaming? For me, it simply means emulating attacker techniques and testing both your detection and response capabilities. Let's say you are interested in [T1136](https://attack.mitre.org/techniques/T1136/) and you want to confirm that your defenses are able to detect Account Creation. From a Purple Teaming prospective that means you should attempt to create local account(s) and check if your controls are able to detect (and respond) to this event.
 
-In this post, we'll speak about [Atomic Red Team](https://atomicredteam.io/) tool and how you can use to easily emulate attacker techniques. It uses a building block called Atmoic, which simply mean a test to run. As of the day of writing this post, there are hundreds of test pee-built in the tool. And all of them are mapped to MITRE ATT&CK model for better tracking. There are different ways to install and use the tool, but we'll focus on PowerShell because let's admit it, PS rocks.
+In this post, we'll speak about [Atomic Red Team](https://atomicredteam.io/) tool and how you can use to easily emulate adversary techniques. It uses a building block called Atmoic, which simply mean a test to run. As of the day of writing this post, there are more than 700 tests pre-built in the tool. And all of them are mapped to [MITRE ATT&CK](https://attack.mitre.org/matrices/enterprise/) model for better tracking. There are different ways to install and use the tool, but we'll focus on PowerShell because let's admit it, PS rocks:raised_hands:.
 
 # Before We Start
-1. Make sure you have permission to run the test.
+1. Make sure you have permission to run the test :notebook:.
 2. Make sure you understand any test before you run it.
-3. Run tests only on test machines.
-4. If your test machine is running on a production network, I wouldn't really call it a test machine ;).
-# Prerequisites
+3. Run the tool only on test machines/environments.
+4. If your test machine is running on a production network, I wouldn't really call it a test machine :wink:.
 # Getting Started
+## Prerequisites
+1. Authorization :tophat:.
+2. PowerShell with admin access, you also need to allow executing scripts in PS `Set-ExecutionPolicy` command.
+3. Internet connectivity to https://githubusercontent.com over HTTPS to Atomic-Red-Team and Atomics download.
+## Installation
+There are two ways to install Atomic-Red-Team, with (or without Atomics). Installing it with Atomics is the recommended approach and it can be achieved with the following command:
+```
+IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+Install-AtomicRedTeam -getAtomics
+```
+![image](/images/posts/ART1.png)
+If installation has failed due to any reason and you wish to restart, you can use the `Force` switch as shown below
+```
+IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+Install-AtomicRedTeam -getAtomics -Force
+```
+## Importing the PS Module
+If you close your PowerShell window, you likely need to re-import the module; which can be done with the following command
+```
+Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" -Force
+```
 # Feature Overview
-## Searching for a Test
+## Listing All Supported Techniques
+You can use this command to show the names of all supported techniques or attacks. Which would take a couple of minutes, but it's necessary to find the ones you are mostly interested in.
+```
+Invoke-AtomicTest All -ShowDetailsBrief
+```
+![image](/images/posts/ART3.png)
+In some cases, you will find there's more than one test for a single technique. For example, [T1003.001](https://attack.mitre.org/techniques/T1003/001/) has 12 tests as shown above.
+## Showing Brief Details About a Technique
+This will simply show the list of tests. We replaced `All` with the technique ID
+```
+Invoke-AtomicTest T1071.004 -ShowDetailsBrief
+```
+![image](/images/posts/ART4.png)
+## Showing Details About a Technique
+This is a very important step to understand what you are getting yourself into, it shows you the details, tools, and commands used to run the test. The command shown below will show the details of all the tests for [T1071.004](https://attack.mitre.org/techniques/T1071/004/). Note that all tests are shown unless you specify the test number.
+```
+Invoke-AtomicTest T1071.004 -ShowDetails
+```
+![image](/images/posts/ART5.png)
+You also have the option of focusing on a single test by appending `TestNumber` switch as shown below
+```
+Invoke-AtomicTest T1071.004 -ShowDetails -TestNumbers 3
+```
+![image](/images/posts/ART6.png)
 ## Checking Prerequisites of a Test
+Some test rely on tools that are not natively installed on Windows and they are refereed to as prerequisites. This is as simple as anything can be. Below example shows that Test 3 of [T1071.004](https://attack.mitre.org/techniques/T1071/004/) has all the prerequisites met.
+```
+Invoke-AtomicTest T1071.004 -TestNumbers 3 -CheckPrereqs
+```
+![image](/images/posts/ART7.png)
+But, [T1095](https://attack.mitre.org/techniques/T1095/) test number 2 need [Ncat](https://nmap.org/ncat/) to be installed
+```
+Invoke-AtomicTest T1095 -TestNumbers 2 -CheckPrereqs
+```
+![image](/images/posts/ART8.png)
 ## Installing Prerequisites
-## 
+Okay, what's the easiest way to install Ncat for [T1095](https://attack.mitre.org/techniques/T1095/) test number 2? A single command shown below, we replace `CheckPrereqs` with `GetPrereqs`. All good now
+```
+Invoke-AtomicTest T1095 -TestNumbers 2 -GetPrereqs
+```
+![image](/images/posts/ART9.png)
+## Running a Test
+Removing the extra switches is what we need to do here. For example, if we want to generate long DNS queries and see if our defense tools are going to trigger an alert, we need to perform the following steps :zap::
+### 1. Read and Understand what's Going to Happen
+```
+Invoke-AtomicTest T1071.004 -TestNumbers 3 -ShowDetails
+```
+![image](/images/posts/ART10.png)
+We can see it uses PowerShell, doesn't need an elevated privilege, and we have 3 customization options shown in red.
+### 2. Run the Test with the Default Options
+```
+Invoke-AtomicTest T1071.004 -TestNumbers 3
+```
+![image](/images/posts/ART11.png)
+### 3. Run the Test with Custom Options (Optional)
+Adding the PromptForInputArgs switch informs the tool to ask us for input arguments, which allows us to configure 3 options as shown below:
+```
+Invoke-AtomicTest T1071.004 -TestNumbers 3 -PromptForInputArgs
+```
+![image](/images/posts/ART12.png)
+### 4. Verify the Test is Working!!!
+Yes it does, Mr. Wireshark approves the tool :fireworks:
+![image](/images/posts/ART13.png)
+
+# Closing Notes
+I really love Atomic Red Team, it allows me to test our defenses very easily. We have went over the most important features according to Hosam Sensor. The tool is awesome, but everyone can make it better, click [here](https://github.com/redcanaryco/atomic-red-team#contribute-to-atomic-red-team) if you wish to contribute ;)
+
+
+Until next time :rocket:
+
+Hosam Hittini

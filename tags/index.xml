@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Shell Venom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Oct 2021 01:52:54 +0400</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jul 2022 00:34:13 +0400</lastBuildDate>
     
 	<atom:link href="https://www.shellvenom.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Atomic-Red-Team</title>
+      <link>https://www.shellvenom.com/tags/atomic-red-team/</link>
+      <pubDate>Thu, 21 Jul 2022 00:34:13 +0400</pubDate>
+      
+      <guid>https://www.shellvenom.com/tags/atomic-red-team/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MITRE-ATT&amp;CK</title>
+      <link>https://www.shellvenom.com/tags/mitre-attck/</link>
+      <pubDate>Thu, 21 Jul 2022 00:34:13 +0400</pubDate>
+      
+      <guid>https://www.shellvenom.com/tags/mitre-attck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Purple-Team</title>
+      <link>https://www.shellvenom.com/tags/purple-team/</link>
+      <pubDate>Thu, 21 Jul 2022 00:34:13 +0400</pubDate>
+      
+      <guid>https://www.shellvenom.com/tags/purple-team/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Red-Canary</title>
+      <link>https://www.shellvenom.com/tags/red-canary/</link>
+      <pubDate>Thu, 21 Jul 2022 00:34:13 +0400</pubDate>
+      
+      <guid>https://www.shellvenom.com/tags/red-canary/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>GIAC</title>
