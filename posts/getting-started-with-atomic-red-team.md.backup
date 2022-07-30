@@ -3,7 +3,7 @@ title: "How to Use Atomic Red Team - A Purple Teaming Tool"
 date: 2022-07-21T00:34:13+04:00
 draft: false
 description: "An overview of Atomic Red Team tool and how to use to start Purple Team engagements."
-tags: ["Atomic-Red-Team","Purple-Team",,"MITRE-ATT&CK","Red-Canary"]
+tags: ["Atomic-Red-Team","MITRE-ATT&CK","Purple-Team","Red-Canary"]
 type: post
 image: "https://www.shellvenom.com/images/posts/ART-Splash.jpg"
 
