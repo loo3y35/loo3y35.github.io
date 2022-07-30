@@ -2,9 +2,10 @@
 title: "How to Pass SANS Exams"
 date: 2021-10-28T01:52:54+04:00
 description: "A simple yet effective guide to help you pass SANS exams with flying colors."
-tags: ["SANS","GIAC","Exam"]
+tags: ["SANS","GIAC"]
 type: post
 draft: false
+image: "images/posts/highlighters.jpg"
 ---
 When I was preparing for my GPEN exam, I searched online (a lot) to find some useful hints. 
 
@@ -67,7 +68,7 @@ What I do is I look at the time and number of questions answered. If 20 minutes 
 ***Pro Tip:*** Hands on questions are presented at the end of the exam.
 
 ### Test Center Rules
-Make sure you review the test center rules ahead of time. I don't like to be surprised right before my exam :cold_sweat:. GIAC has started supporting taking exams form the comfort if your home, but I didn't try that to be honest.
+Make sure you review the test center rules ahead of time. I don't like to be surprised right before my exam :cold_sweat:. GIAC has started supporting taking exams form the comfort of your home, but I didn't try that to be honest.
 ### Preparing the GIAC Bag
 The exam is open book, but you are not allowed to bring electronic devices with you. What I typically carry is:
 1. The course materials.
