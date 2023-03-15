@@ -217,75 +217,75 @@
 </ol>
 <h2 id="installation">Installation</h2>
 <p>There are two ways to install Atomic-Red-Team, with (or without Atomics). Installing it with Atomics is the recommended approach and it can be achieved with the following command:</p>
-<pre><code>IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+<pre tabindex="0"><code>IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
 Install-AtomicRedTeam -getAtomics
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART1.png" id="zoom-default" alt="image"  />
 </p>
 If installation has failed due to any reason and you wish to restart, you can use the <code>Force</code> switch as shown below</p>
-<pre><code>IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+<pre tabindex="0"><code>IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
 Install-AtomicRedTeam -getAtomics -Force
 </code></pre><h2 id="importing-the-ps-module">Importing the PS Module</h2>
 <p>If you close your PowerShell window, you likely need to re-import the module; which can be done with the following command</p>
-<pre><code>Import-Module &quot;C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1&quot; -Force
+<pre tabindex="0"><code>Import-Module &quot;C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1&quot; -Force
 </code></pre><h1 id="feature-overview">Feature Overview</h1>
 <h2 id="listing-all-supported-techniques">Listing All Supported Techniques</h2>
 <p>You can use this command to show the names of all supported techniques or attacks. Which would take a couple of minutes, but it&rsquo;s necessary to find the ones you are mostly interested in.</p>
-<pre><code>Invoke-AtomicTest All -ShowDetailsBrief
+<pre tabindex="0"><code>Invoke-AtomicTest All -ShowDetailsBrief
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART3.png" id="zoom-default" alt="image"  />
 </p>
 In some cases, you will find there&rsquo;s more than one test for a single technique. For example, <a href="https://attack.mitre.org/techniques/T1003/001/">T1003.001</a> has 12 tests as shown above.</p>
 <h2 id="showing-brief-details-about-a-technique">Showing Brief Details About a Technique</h2>
 <p>This will simply show the list of tests. We replaced <code>All</code> with the technique ID</p>
-<pre><code>Invoke-AtomicTest T1071.004 -ShowDetailsBrief
+<pre tabindex="0"><code>Invoke-AtomicTest T1071.004 -ShowDetailsBrief
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART4.png" id="zoom-default" alt="image"  />
 </p></p>
 <h2 id="showing-details-about-a-technique">Showing Details About a Technique</h2>
 <p>This is a very important step to understand what you are getting yourself into, it shows you the details, tools, and commands used to run the test. The command shown below will show the details of all the tests for <a href="https://attack.mitre.org/techniques/T1071/004/">T1071.004</a>. Note that all tests are shown unless you specify the test number.</p>
-<pre><code>Invoke-AtomicTest T1071.004 -ShowDetails
+<pre tabindex="0"><code>Invoke-AtomicTest T1071.004 -ShowDetails
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART5.png" id="zoom-default" alt="image"  />
 </p>
 You also have the option of focusing on a single test by appending <code>TestNumber</code> switch as shown below</p>
-<pre><code>Invoke-AtomicTest T1071.004 -ShowDetails -TestNumbers 3
+<pre tabindex="0"><code>Invoke-AtomicTest T1071.004 -ShowDetails -TestNumbers 3
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART6.png" id="zoom-default" alt="image"  />
 </p></p>
 <h2 id="checking-prerequisites-of-a-test">Checking Prerequisites of a Test</h2>
 <p>Some test rely on tools that are not natively installed on Windows and they are refereed to as prerequisites. This is as simple as anything can be. Below example shows that Test 3 of <a href="https://attack.mitre.org/techniques/T1071/004/">T1071.004</a> has all the prerequisites met.</p>
-<pre><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -CheckPrereqs
+<pre tabindex="0"><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -CheckPrereqs
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART7.png" id="zoom-default" alt="image"  />
 </p>
 But, <a href="https://attack.mitre.org/techniques/T1095/">T1095</a> test number 2 need <a href="https://nmap.org/ncat/">Ncat</a> to be installed</p>
-<pre><code>Invoke-AtomicTest T1095 -TestNumbers 2 -CheckPrereqs
+<pre tabindex="0"><code>Invoke-AtomicTest T1095 -TestNumbers 2 -CheckPrereqs
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART8.png" id="zoom-default" alt="image"  />
 </p></p>
 <h2 id="installing-prerequisites">Installing Prerequisites</h2>
 <p>Okay, what&rsquo;s the easiest way to install Ncat for <a href="https://attack.mitre.org/techniques/T1095/">T1095</a> test number 2? A single command shown below, we replace <code>CheckPrereqs</code> with <code>GetPrereqs</code>. All good now</p>
-<pre><code>Invoke-AtomicTest T1095 -TestNumbers 2 -GetPrereqs
+<pre tabindex="0"><code>Invoke-AtomicTest T1095 -TestNumbers 2 -GetPrereqs
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART9.png" id="zoom-default" alt="image"  />
 </p></p>
 <h2 id="running-a-test">Running a Test</h2>
 <p>Removing the extra switches is what we need to do here. For example, if we want to generate long DNS queries and see if our defense tools are going to trigger an alert, we need to perform the following steps ⚡:</p>
 <h3 id="1-read-and-understand-whats-going-to-happen">1. Read and Understand what&rsquo;s Going to Happen</h3>
-<pre><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -ShowDetails
+<pre tabindex="0"><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -ShowDetails
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART10.png" id="zoom-default" alt="image"  />
 </p>
 We can see it uses PowerShell, doesn&rsquo;t need an elevated privilege, and we have 3 customization options shown in red.</p>
 <h3 id="2-run-the-test-with-the-default-options">2. Run the Test with the Default Options</h3>
-<pre><code>Invoke-AtomicTest T1071.004 -TestNumbers 3
+<pre tabindex="0"><code>Invoke-AtomicTest T1071.004 -TestNumbers 3
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART11.png" id="zoom-default" alt="image"  />
 </p></p>
 <h3 id="3-run-the-test-with-custom-options-optional">3. Run the Test with Custom Options (Optional)</h3>
 <p>Adding the PromptForInputArgs switch informs the tool to ask us for input arguments, which allows us to configure 3 options as shown below:</p>
-<pre><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -PromptForInputArgs
+<pre tabindex="0"><code>Invoke-AtomicTest T1071.004 -TestNumbers 3 -PromptForInputArgs
 </code></pre><p><p class="md__image">
   <img src="/images/posts/ART12.png" id="zoom-default" alt="image"  />
 </p></p>

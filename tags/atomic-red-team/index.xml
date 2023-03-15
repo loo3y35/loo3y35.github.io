@@ -6,11 +6,7 @@
     <description>Recent content in Atomic-Red-Team on Shell Venom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Jul 2022 00:34:13 +0400</lastBuildDate>
-    
-	<atom:link href="https://www.shellvenom.com/tags/atomic-red-team/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 21 Jul 2022 00:34:13 +0400</lastBuildDate><atom:link href="https://www.shellvenom.com/tags/atomic-red-team/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Started with Atomic Red Team - A Purple Teaming Tool</title>
       <link>https://www.shellvenom.com/posts/getting-started-with-atomic-red-team/</link>
