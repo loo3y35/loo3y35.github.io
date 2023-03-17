@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #9c00c8;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>How to Download IPA Files For Security Analysis</title>
+    <meta name="description" content="IPA files are packages that include iOS Apps and it can be tricky to download them. In this blog we show how to easily get these files.">
+    <meta name="keywords" content='blog, shell venom, cyber security, security, blue team, red team, purple team, hacking, DAST, iOS, IPA, Red-Team, Reverse-Engineering, SAST'>
+
+    <meta property="og:url" content="https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="How to Download IPA Files For Security Analysis">
+    <meta property="og:description" content="IPA files are packages that include iOS Apps and it can be tricky to download them. In this blog we show how to easily get these files.">
+    <meta property="og:image" content="https://www.shellvenom.com/images/posts/IPA/5090-4f2a-8b04-9498db2a9be7.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Download IPA Files For Security Analysis">
+    <meta name="twitter:description" content="IPA files are packages that include iOS Apps and it can be tricky to download them. In this blog we show how to easily get these files.">
+    <meta property="twitter:domain" content="https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/">
+    <meta property="twitter:url" content="https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/">
+    <meta name="twitter:image" content="https://www.shellvenom.com/images/posts/IPA/5090-4f2a-8b04-9498db2a9be7.png">
+
+    
+    <link rel="canonical" href="https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+      <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5554PCW');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YL05DBQ690"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-YL05DBQ690');
+  </script>
+  
+  <!-- MS Clarity Start-->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "g9n16nn8sn");
+  </script>
+  <!-- MS Clarity End-->
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://www.shellvenom.com">
+                <img src="/images/avatar.webp" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://www.shellvenom.com">Shell Venom</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/whoami/"> whoami </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://www.purplehat.ae/"> Forensicator Needed!! </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://twitter.com/looEyes"><span data-feather='twitter'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://www.linkedin.com/in/hhittini/"><span data-feather='linkedin'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/loo3y35"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/whoami/"> whoami </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://www.purplehat.ae/"> Forensicator Needed!! </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://twitter.com/looEyes"><span data-feather='twitter'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/hhittini/"><span data-feather='linkedin'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/loo3y35"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>How to Download IPA Files For Security Analysis</h1>
+        <small role="doc-subtitle">IPA files are packages that include iOS Apps and it can be tricky to download them. In this blog we show how to easily get these files.</small>
+        <p class="post-date">
+            March 17, 2023
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/dast">DAST</a></li>
+        
+            <li class="post-tag"><a href="/tags/ios">iOS</a></li>
+        
+            <li class="post-tag"><a href="/tags/ipa">IPA</a></li>
+        
+            <li class="post-tag"><a href="/tags/red-team">Red-Team</a></li>
+        
+            <li class="post-tag"><a href="/tags/reverse-engineering">Reverse-Engineering</a></li>
+        
+            <li class="post-tag"><a href="/tags/sast">SAST</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><p class="md__image">
+  <img src="/images/posts/IPA/5090-4f2a-8b04-9498db2a9be7.png" id="zoom-default" alt="image"  />
+</p></p>
+<h1 id="introduction">Introduction</h1>
+<p>Few weeks ago, I needed to download an iOS IPA file to perform a static analysis of that app. But as you may expect, Apple makes it extremely hard to download App Store to a destination that is not an iPhone/iPad, and if they are downloaded to an iPhone/iPad 📱 it&rsquo;s not easy to extract the file. Unless the device is rooted, you are probably out of luck. So I searched and searched and searched for a method and finally found one using an open source package tool named <a href="https://github.com/majd/ipatool">IPATool</a>. A shoutout to <a href="https://majd.dev/">Majd Alfhaily</a> for the fantastic piece of software. The tool allows you to search and download apps, I recommend using a Non-Prod Apple account during the operation. I decided to write this blog to help save your time, let&rsquo;s do it..✔️</p>
+<h1 id="before-we-start">Before We Start</h1>
+<ol>
+<li>Make sure you have permission 📃, don&rsquo;t use the tool unethically.</li>
+<li>Use a testing Apple ID just to be safe.</li>
+<li>If latest versions don&rsquo;t work, refer to the next section and use the same versions that worked for me.</li>
+</ol>
+<h1 id="the-environment">The Environment</h1>
+<p>This list shows the software versions that worked for me. Running packaged in Linux systems can be extremely tricky due to software dependency:</p>
+<ol>
+<li>Kali Linux 2022.3</li>
+<li>Kernel version <code>Linux kali 5.19.0-kali2-amd64 #1 SMP PREEMPT_DYNAMIC Debian 5.19.11-1kali2 (2022-10-10) x86_64 GNU/Linux</code></li>
+<li>ipatool version 2.0.0</li>
+</ol>
+<h1 id="the-setup">The Setup</h1>
+<ol>
+<li>Download the latest iptool release from <a href="https://github.com/majd/ipatool/releases">GitHub</a>.</li>
+<li>Extract the binary.</li>
+<li>Make it executable using <code>chmod +x FILE_NAME</code>.</li>
+</ol>
+<h1 id="the-three-step-formula">The Three Step Formula</h1>
+<h2 id="step-1-login">Step 1 Login</h2>
+<p>First step is to login using your Apple ID</p>
+<pre tabindex="0"><code>./ipatool-2.0.0-linux-amd64 auth login -e _EMAIL_ -p _PASSWORD_
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/IPA/login.png" id="zoom-default" alt="image"  />
+</p>
+If it shows you <code>success=true</code> you are good to proceed. And if it shows you the name of someone else, something has went really wrong.</p>
+<h2 id="step-2-find-the-package">Step 2 Find The Package</h2>
+<p>I decided to download the Amazon Prime Video package. Below is the command, but as you can see output is NOT sexy. My goal is to extract the Bundle ID, but why stop there?</p>
+<pre tabindex="0"><code>./ipatool-2.0.0-linux-amd64 search prime
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/IPA/search1.png" id="zoom-default" alt="image"  />
+</p>
+We have 5 results, let&rsquo;s make the output pretty</p>
+<pre tabindex="0"><code>./ipatool-2.0.0-linux-amd64 search prime --format json | jq .apps[].bundleID
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/IPA/search2.png" id="zoom-default" alt="image"  />
+</p>
+This is only showing the Bundle IDs, cool cool</p>
+<p>If you are wondering how the JSON object looks like (without the magic) here you go</p>
+<pre tabindex="0"><code>./ipatool-2.0.0-linux-amd64 search prime --format json | jq .
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/IPA/search3.png" id="zoom-default" alt="image"  />
+</p>
+And if you want to be more confident in the package selection, you can show the name as well as the Bundle ID</p>
+<pre tabindex="0"><code>./ipatool-2.0.0-linux-amd64 search prime --format json | jq . | grep -i &quot;bundle\|name&quot;
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/IPA/search4.png" id="zoom-default" alt="image"  />
+</p></p>
+<h2 id="step-3--download">Step 3  Download</h2>
+<p>Now it&rsquo;s time to download, tried below command but it failed</p>
+<pre tabindex="0"><code>./ipatool-2.0.0-linux-amd64 download -b com.amazon.aiv.AIVApp
+</code></pre><p>The following one worked 🎯</p>
+<pre tabindex="0"><code>./ipatool-2.0.0-linux-amd64 download -b com.amazon.aiv.AIVApp --purchase
+</code></pre><p><p class="md__image">
+  <img src="/images/posts/IPA/download1.png" id="zoom-default" alt="image"  />
+</p>
+As you can see below the file EXISTS now
+<p class="md__image">
+  <img src="/images/posts/IPA/download2.png" id="zoom-default" alt="image"  />
+</p>
+But wait, how did I figure out the <code>--purchase</code> thingy? Easy, the tool help is awesome that&rsquo;s how
+<p class="md__image">
+  <img src="/images/posts/IPA/download3.png" id="zoom-default" alt="image"  />
+</p></p>
+<h1 id="closing-notes">Closing Notes</h1>
+<p>Well, that&rsquo;s it. It is that simple, now go and do your magic. I really loved the tool and wanted to share the steps with you. Thank the <a href="https://github.com/majd">devloper</a> in whatever way you find appropriate.</p>
+<p>Until next time 🚀</p>
+<p>Hosam Hittini</p>
+
+        </p>
+    </div>	
+</div>
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2023 Shell Venom</span>
+    <span>Baked with &#128156;&#65039;</span>
+	<span>Red, Blue, and Everything in Between &#128013</span>
+</footer>
+<script src="/js/medium-zoom.js"></script>
+		<script src="/js/placeholders.js" defer></script>
+		<script src="/js/index.js"></script>
+    </body>
+</html>

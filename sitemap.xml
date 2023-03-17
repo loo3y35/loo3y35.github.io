@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.shellvenom.com/tags/dast/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/tags/ios/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/tags/ipa/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/posts/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/tags/red-team/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/tags/reverse-engineering/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/tags/sast/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
+    <loc>https://www.shellvenom.com/tags/</loc>
+    <lastmod>2023-03-17T00:34:13+04:00</lastmod>
+  </url><url>
     <loc>https://www.shellvenom.com/tags/atomic-red-team/</loc>
     <lastmod>2022-07-21T00:34:13+04:00</lastmod>
   </url><url>
@@ -11,19 +41,10 @@
     <loc>https://www.shellvenom.com/tags/mitre-attck/</loc>
     <lastmod>2022-07-21T00:34:13+04:00</lastmod>
   </url><url>
-    <loc>https://www.shellvenom.com/posts/</loc>
-    <lastmod>2022-07-21T00:34:13+04:00</lastmod>
-  </url><url>
     <loc>https://www.shellvenom.com/tags/purple-team/</loc>
     <lastmod>2022-07-21T00:34:13+04:00</lastmod>
   </url><url>
     <loc>https://www.shellvenom.com/tags/red-canary/</loc>
-    <lastmod>2022-07-21T00:34:13+04:00</lastmod>
-  </url><url>
-    <loc>https://www.shellvenom.com/</loc>
-    <lastmod>2022-07-21T00:34:13+04:00</lastmod>
-  </url><url>
-    <loc>https://www.shellvenom.com/tags/</loc>
     <lastmod>2022-07-21T00:34:13+04:00</lastmod>
   </url><url>
     <loc>https://www.shellvenom.com/tags/giac/</loc>

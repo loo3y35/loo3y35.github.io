@@ -6,7 +6,16 @@
     <description>Recent content on Shell Venom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Jul 2022 00:34:13 +0400</lastBuildDate><atom:link href="https://www.shellvenom.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Mar 2023 00:34:13 +0400</lastBuildDate><atom:link href="https://www.shellvenom.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Download IPA Files For Security Analysis</title>
+      <link>https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/</link>
+      <pubDate>Fri, 17 Mar 2023 00:34:13 +0400</pubDate>
+      
+      <guid>https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/</guid>
+      <description>Introduction Few weeks ago, I needed to download an iOS IPA file to perform a static analysis of that app. But as you may expect, Apple makes it extremely hard to download App Store to a destination that is not an iPhone/iPad, and if they are downloaded to an iPhone/iPad 📱 it&amp;rsquo;s not easy to extract the file. Unless the device is rooted, you are probably out of luck. So I searched and searched and searched for a method and finally found one using an open source package tool named IPATool.</description>
+    </item>
+    
     <item>
       <title>Getting Started with Atomic Red Team - A Purple Teaming Tool</title>
       <link>https://www.shellvenom.com/posts/getting-started-with-atomic-red-team/</link>
