@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reverse-Engineering on Shell Venom</title>
-    <link>https://www.shellvenom.com/tags/reverse-engineering/</link>
-    <description>Recent content in Reverse-Engineering on Shell Venom</description>
+    <title>Reverse-Engineering on Purple Hat Blog</title>
+    <link>https://blog.purplehat.ae/tags/reverse-engineering/</link>
+    <description>Recent content in Reverse-Engineering on Purple Hat Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Mar 2023 00:34:13 +0400</lastBuildDate><atom:link href="https://www.shellvenom.com/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Mar 2023 00:34:13 +0400</lastBuildDate><atom:link href="https://blog.purplehat.ae/tags/reverse-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Download IPA Files For Security Analysis</title>
-      <link>https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/</link>
+      <link>https://blog.purplehat.ae/posts/how-to-download-ipa-files-for-security-analysis/</link>
       <pubDate>Fri, 17 Mar 2023 00:34:13 +0400</pubDate>
       
-      <guid>https://www.shellvenom.com/posts/how-to-download-ipa-files-for-security-analysis/</guid>
+      <guid>https://blog.purplehat.ae/posts/how-to-download-ipa-files-for-security-analysis/</guid>
       <description>Introduction Few weeks ago, I needed to download an iOS IPA file to perform a static analysis of that app. But as you may expect, Apple makes it extremely hard to download App Store to a destination that is not an iPhone/iPad, and if they are downloaded to an iPhone/iPad 📱 it&amp;rsquo;s not easy to extract the file. Unless the device is rooted, you are probably out of luck. So I searched and searched and searched for a method and finally found one using an open source package tool named IPATool.</description>
     </item>
     
