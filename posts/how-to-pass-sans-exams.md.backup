@@ -5,13 +5,20 @@ description: "A simple yet effective guide to help you pass SANS exams with flyi
 tags: ["SANS","GIAC"]
 type: post
 draft: false
-image: "images/posts/highlighters.jpg"
+image: "https://www.shellvenom.com/images/posts/highlighters.jpg"
+showTableOfContents: true
 ---
 When I was preparing for my GPEN exam, I searched online (a lot) to find some useful hints. 
 
 This article helps you in passing SANS/GIAC exams and get a high score. I'm going to share very simple and effective tips to help you archive that!
 
 I myself have passed three GIAC exams as of today, I scored more than 90% in all three, and I finished ~30 minutes early :zap: in each one of them.
+
+**2023 Update:** It came to my attention that the exam format is changing, some questions now are no 
+longer in a multiple choice format and that seems to be changing slowly in all exams. So for example, if 
+you are asked to identify the Process ID for a malicious process you will need to type 4444 in a text box 
+rather than select from the list. This is not a huge deal to me, but I saw this on Reddit and though you 
+should know ;)
 
 ![image](/images/posts/gpen_cert1.jpg)
 

@@ -26,6 +26,7 @@
     <meta property="og:title" content="How to Pass SANS Exams">
     <meta property="og:description" content="A simple yet effective guide to help you pass SANS exams with flying colors.">
     <meta property="og:image" content="https://www.shellvenom.com/images/posts/highlighters.jpg">
+    <meta property="og:image:secure_url" content="https://www.shellvenom.com/images/posts/highlighters.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="How to Pass SANS Exams">
@@ -37,13 +38,17 @@
     
     <link rel="canonical" href="https://blog.purplehat.ae/posts/how-to-pass-sans-exams/" />
 
-    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
 
-    <script src="/js/svg-injector.min.js"></script>
-    <script src="/js/feather-icons.min.js"></script>
-    <script src="/js/main.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.edd985581bf860dfb4507e5885197f1680160c7fe19f23b31e183126d99dd596.js" integrity="sha256-7dmFWBv4YN&#43;0UH5YhRl/FoAWDH/hnyOzHhgxJtmd1ZY="></script>
 
     
     
@@ -87,7 +92,7 @@
         
         <div class="avatar">
             <a href="https://blog.purplehat.ae">
-                <img src="/images/avatar.webp" alt="avatar" />
+                <img src='/images/avatar.webp' alt="avatar" />
             </a>
         </div>
         
@@ -99,15 +104,15 @@
         <div class="nav-links">
             
             <div class="nav-link">
-                <a href="/"> Home </a>
+                <a href="https://blog.purplehat.ae/"> Home </a>
             </div>
             
             <div class="nav-link">
-                <a href="/posts/"> Posts </a>
+                <a href="https://blog.purplehat.ae/posts/"> Posts </a>
             </div>
             
             <div class="nav-link">
-                <a href="/whoami/"> whoami </a>
+                <a href="https://blog.purplehat.ae/whoami/"> whoami </a>
             </div>
             
             <div class="nav-link">
@@ -115,7 +120,7 @@
             </div>
             
             <div class="nav-link">
-                <a href="/tags/"> Tags </a>
+                <a href="https://blog.purplehat.ae/tags/"> Tags </a>
             </div>
             
             <div class="nav-link">
@@ -133,12 +138,14 @@
 
             <span class="nav-icons-divider"></span>
             <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
                 <a>
                     <span id="theme-toggle-icon" data-feather="moon"></span>
                 </a>
             </div>
 
             <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
                 <a>
                     <span data-feather="menu"></span>
                 </a>
@@ -148,15 +155,15 @@
             <ul class="nav-hamburger-list visibility-hidden">
                 
                 <li class="nav-item">
-                    <a href="/"> Home </a>
+                    <a href="https://blog.purplehat.ae/"> Home </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="/posts/"> Posts </a>
+                    <a href="https://blog.purplehat.ae/posts/"> Posts </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="/whoami/"> whoami </a>
+                    <a href="https://blog.purplehat.ae/whoami/"> whoami </a>
                 </li>
                 
                 <li class="nav-item">
@@ -164,7 +171,7 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a href="/tags/"> Tags </a>
+                    <a href="https://blog.purplehat.ae/tags/"> Tags </a>
                 </li>
                 
                 <li class="nav-item">
@@ -180,6 +187,7 @@
                 </li>
                 
                 <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
                     <a>
                         <span id="theme-toggle-icon" data-feather="moon"></span>
                     </a>
@@ -194,15 +202,15 @@
     <div class="post-header-section">
         <h1>How to Pass SANS Exams</h1>
         <small role="doc-subtitle">A simple yet effective guide to help you pass SANS exams with flying colors.</small>
-        <p class="post-date">
-            October 28, 2021
+        <p class="post-date">October 28, 2021
+        
         </p>
 
         <ul class="post-tags">
         
-            <li class="post-tag"><a href="/tags/sans">SANS</a></li>
+            <li class="post-tag"><a href="https://blog.purplehat.ae/tags/sans">SANS</a></li>
         
-            <li class="post-tag"><a href="/tags/giac">GIAC</a></li>
+            <li class="post-tag"><a href="https://blog.purplehat.ae/tags/giac">GIAC</a></li>
         
         </ul>
     </div>
@@ -212,22 +220,25 @@
             <p>When I was preparing for my GPEN exam, I searched online (a lot) to find some useful hints.</p>
 <p>This article helps you in passing SANS/GIAC exams and get a high score. I&rsquo;m going to share very simple and effective tips to help you archive that!</p>
 <p>I myself have passed three GIAC exams as of today, I scored more than 90% in all three, and I finished ~30 minutes early ⚡ in each one of them.</p>
-<p><p class="md__image">
-  <img src="/images/posts/gpen_cert1.jpg" id="zoom-default" alt="image"  />
-</p></p>
-<h2 id="what-is-the-difference-between-sans-and-giac">What is the difference between SANS and GIAC?</h2>
+<p><strong>2023 Update:</strong> It came to my attention that the exam format is changing, some questions now are no
+longer in a multiple choice format and that seems to be changing slowly in all exams. So for example, if
+you are asked to identify the Process ID for a malicious process you will need to type 4444 in a text box
+rather than select from the list. This is not a huge deal to me, but I saw this on Reddit and though you
+should know ;)</p>
+<p><img src="/images/posts/gpen_cert1.jpg" alt="image"></p>
+<h1 id="what-is-the-difference-between-sans-and-giac">What is the difference between SANS and GIAC?</h1>
 <p><a href="https://www.sans.org/">SANS Institute</a> specializes in Information and Cyber Security training, it was founded in 1898. Simply it&rsquo;s the body that provides training services. On the other hand, <a href="https://www.giac.org/">GIAC</a> is the entity that is responsible for the examination.</p>
 <p>For example, you can study <a href="https://www.sans.org/cyber-security-courses/network-penetration-testing-ethical-hacking/">SEC560: Network Penetration Testing and Ethical Hacking</a> course from SANS. And if you wish, you can take the <a href="https://www.giac.org/certifications/penetration-tester-gpen/">GIAC Penetration Tester GPEN</a> exam from GIAC.</p>
-<h2 id="what-is-the-formula-of-success">What is the Formula of Success?</h2>
-<h3 id="remember-the-exam-is-open-book">Remember, the Exam is Open Book</h3>
+<h1 id="what-is-the-formula-of-success">What is the Formula of Success?</h1>
+<h2 id="remember-the-exam-is-open-book">Remember, the Exam is Open Book</h2>
 <p>The exam is open book so if you study hard you will definitely pass. GIAC want you to pass (unlike other certification vendors). I have seen that in both the study material and the exam nature; they want to get the information out there.</p>
 <h3 id="watch-the-videos-and-take-notes">Watch the Videos and Take Notes</h3>
 <p>Videos are the first thing I watch. They help me understand complicated concepts. Additionally, many times instructors share extracurricular content that helps you in your daily conversations.</p>
-<h3 id="solve-all-the-labs">Solve All the Labs</h3>
+<h2 id="solve-all-the-labs">Solve All the Labs</h2>
 <p>The labs are insanely amusing and educational. And you will be asked about these labs. Make sure you are fully comfortable in solving all exercies covered in the material.</p>
-<h3 id="read-thoroughly">Read Thoroughly</h3>
+<h2 id="read-thoroughly">Read Thoroughly</h2>
 <p>You need to read every word in the books, and I mean EVERY SINGLE WORD. Specially the notes below the slides, they have some details that are not covered in the lecture due to time limitations. I highlight every sentence I didn&rsquo;t know before taking the course to help me memorize it.</p>
-<h3 id="prepare-an-awesome-index">Prepare an Awesome Index</h3>
+<h2 id="prepare-an-awesome-index">Prepare an Awesome Index</h2>
 <p>What&rsquo;s the index? It&rsquo;s small booklet you prepare to help you navigate the books and find answers (quickly!). I can&rsquo;t stress this enough, it&rsquo;s your key to success. The steps I take to prepare an awesome index are:</p>
 <ol>
 <li>When you read the books and highlight information, use a different color for each book. For example use Blue for Book 1, Yellow for Book 2&hellip;etc.</li>
@@ -263,12 +274,10 @@
 <li>Convert the excel sheet to a more readable format using <a href="https://voltaire.publickey.io/">Voltaire</a>, it&rsquo;s an index creation tool built by <a href="https://www.sans.org/profiles/matthew-toussain/"> Matthew Toussain</a> - a SANS Instructor. The tool is simple to use, but you can always refer to the tutorial <a href="https://www.youtube.com/watch?v=bHpkTArlXWc">here</a>.</li>
 <li>Take the Output, Paste it in a Word Document.</li>
 <li>I take it a step further and Color Code the Book Number as shown below (Yellow for Book 2). Color coding helps me decided quickly which book to search; I use yellow to quickly jump to Book 2.
-<p class="md__image">
-  <img src="/images/posts/index_sample.png" id="zoom-default" alt="image"  />
-</p></li>
+<img src="/images/posts/index_sample.png" alt="image"></li>
 <li>Print the Index!</li>
 </ol>
-<h3 id="utilize-practice-exams-to-the-most">Utilize Practice Exams to the Most</h3>
+<h2 id="utilize-practice-exams-to-the-most">Utilize Practice Exams to the Most</h2>
 <p>A GIAC certification attempt comes with two practice exams as of now. Both the actual exam and practice exam have hands on questions where you&rsquo;ll be granted access to a VM to run an exploit for example. Below are the rules I live by:</p>
 <ol>
 <li>Treat the practice exam like the actual exam.</li>
@@ -278,14 +287,14 @@
 <li>Identify knowledge gaps and study more (if required).</li>
 </ol>
 <p>Practice exams in on my opinion are slightly easier than the actual exam, use your score to decide if you are ready.</p>
-<h3 id="time-management">Time Management</h3>
+<h2 id="time-management">Time Management</h2>
 <p>If you refer to the <a href="https://www.giac.org/certifications/penetration-tester-gpen/">GPEN</a> exam page as an example, it tells you there are 82 questions that should be answered in 3 hours; which gives you slightly more than 2 minutes for each question.</p>
 <p>What I do is I look at the time and number of questions answered. If 20 minutes are gone, I should have answered about 10 questions.</p>
 <p><em><strong>Pro Tip:</strong></em> If you are stuck on a question just skip it 🕐.</p>
 <p><em><strong>Pro Tip:</strong></em> Hands on questions are presented at the end of the exam.</p>
-<h3 id="test-center-rules">Test Center Rules</h3>
+<h2 id="test-center-rules">Test Center Rules</h2>
 <p>Make sure you review the test center rules ahead of time. I don&rsquo;t like to be surprised right before my exam 😰. GIAC has started supporting taking exams form the comfort of your home, but I didn&rsquo;t try that to be honest.</p>
-<h3 id="preparing-the-giac-bag">Preparing the GIAC Bag</h3>
+<h2 id="preparing-the-giac-bag">Preparing the GIAC Bag</h2>
 <p>The exam is open book, but you are not allowed to bring electronic devices with you. What I typically carry is:</p>
 <ol>
 <li>The course materials.</li>
@@ -293,33 +302,107 @@
 <li>The Index.</li>
 <li>Sometimes I print man pages for tools I use heavily like NMAP.</li>
 <li>SANS cheat sheets.
-<p class="md__image">
-  <img src="/images/posts/sans_cheat_sheets.jpg" id="zoom-default" alt="image"  />
-</p></li>
+<img src="/images/posts/sans_cheat_sheets.jpg" alt="image"></li>
 </ol>
-<h2 id="some-remarks">Some Remarks</h2>
-<h3 id="giac-advisory-board">GIAC Advisory Board</h3>
+<h1 id="some-remarks">Some Remarks</h1>
+<h2 id="giac-advisory-board">GIAC Advisory Board</h2>
 <p>GIAC Advisory Board is a mailing list that has GIAC certified professionals who scored more than 90%, or who I like to call <em><strong>The Best of The Best</strong></em>. You should definitely try to get in there. This board is used for technical discussions mainly, for example, if you are stuck somewhere in a forensics case you can post your question, and the experts would jump to the rescue 👽.</p>
-<h3 id="giveaway">Giveaway</h3>
+<h2 id="giveaway">Giveaway</h2>
 <p>Did you know that you can give away practice exams? Let&rsquo;s say you scored 95% in your first practice exam and you are comfortable enough to skip the second one, you can give it away to anyone. Fellow analysts occasionally give away practice exams in the Advisory Board 🎁.</p>
-<h2 id="closing-notes">Closing Notes</h2>
+<h1 id="closing-notes">Closing Notes</h1>
 <p>GIAC exams are not hard. GIAC want you to pass the exam. If you have any questions feel free to reach out ✉️, I&rsquo;m there to support you.</p>
 <p>Until next time..</p>
-<p>Hosam,</p>
+<p>Hosam Hittini,</p>
 
         </p>
-    </div>	
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
 </div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-the-difference-between-sans-and-giac">What is the difference between SANS and GIAC?</a></li>
+    <li><a href="#what-is-the-formula-of-success">What is the Formula of Success?</a>
+      <ul>
+        <li><a href="#remember-the-exam-is-open-book">Remember, the Exam is Open Book</a></li>
+        <li><a href="#solve-all-the-labs">Solve All the Labs</a></li>
+        <li><a href="#read-thoroughly">Read Thoroughly</a></li>
+        <li><a href="#prepare-an-awesome-index">Prepare an Awesome Index</a></li>
+        <li><a href="#utilize-practice-exams-to-the-most">Utilize Practice Exams to the Most</a></li>
+        <li><a href="#time-management">Time Management</a></li>
+        <li><a href="#test-center-rules">Test Center Rules</a></li>
+        <li><a href="#preparing-the-giac-bag">Preparing the GIAC Bag</a></li>
+      </ul>
+    </li>
+    <li><a href="#some-remarks">Some Remarks</a>
+      <ul>
+        <li><a href="#giac-advisory-board">GIAC Advisory Board</a></li>
+        <li><a href="#giveaway">Giveaway</a></li>
+      </ul>
+    </li>
+    <li><a href="#closing-notes">Closing Notes</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
 
     
 
         </main><footer class="footer">
+    
+    
+
+    
     <span>&copy; 2023 Purple Hat Blog</span>
-    <span>Baked with &#128156;&#65039;</span>
-	<span>Red, Blue, and Everything in Between &#128013</span>
+    
+    <span>
+        Baked with &#128156;&#65039;
+    </span>
+    <span>
+        Red, Blue, and Everything in Between &#128013
+    </span>
 </footer>
-<script src="/js/medium-zoom.js"></script>
-		<script src="/js/placeholders.js" defer></script>
-		<script src="/js/index.js"></script>
-    </body>
+</body>
 </html>
